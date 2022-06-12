@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiendaDeRopa.UI", "TiendaDeRopa.UI\TiendaDeRopa.UI.csproj", "{19600DC0-3917-4187-8573-396ACD1DC22E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiendaDeRopa.Dominio", "TiendaDeRopa.Dominio\TiendaDeRopa.Dominio.csproj", "{A2ACE04C-734E-48A7-ABD4-9232D86C556F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19600DC0-3917-4187-8573-396ACD1DC22E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19600DC0-3917-4187-8573-396ACD1DC22E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19600DC0-3917-4187-8573-396ACD1DC22E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19600DC0-3917-4187-8573-396ACD1DC22E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2ACE04C-734E-48A7-ABD4-9232D86C556F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2ACE04C-734E-48A7-ABD4-9232D86C556F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2ACE04C-734E-48A7-ABD4-9232D86C556F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2ACE04C-734E-48A7-ABD4-9232D86C556F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D58258CB-52D1-4CFE-84E1-E538C2E9D9A4}
+	EndGlobalSection
+EndGlobal
