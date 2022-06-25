@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TiendaDeRopa.Dominio\TiendaDeRopa.Dominio.csproj" />
+    <ProjectReference Include="..\TiendaDeRopa.Logica\TiendaDeRopa.Logica.csproj" />
   </ItemGroup>
 
 </Project>
