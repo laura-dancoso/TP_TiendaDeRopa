@@ -11,6 +11,7 @@
         public Producto(int id,string nombre,string descripcion, string talle, float precio, int stock):base(id)
         {
             Nombre = nombre;
+            Descripcion = descripcion; 
             Talle = talle;
             Precio = precio;
             Stock = stock;
