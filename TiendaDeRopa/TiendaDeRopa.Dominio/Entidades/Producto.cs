@@ -7,7 +7,7 @@
         public float Precio { get; set; }
         public int Stock { get; private set; }
 
-        public Producto(string descripcion, string talle, float precio, int stock)
+        public Producto(int id,string descripcion, string talle, float precio, int stock):base(id)
         {
             Descripcion = descripcion;
             Talle = talle;

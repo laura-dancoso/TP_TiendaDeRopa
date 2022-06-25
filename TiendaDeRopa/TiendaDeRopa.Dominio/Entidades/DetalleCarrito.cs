@@ -5,7 +5,7 @@
         public int Cantidad { get; private set; }
         public Producto Producto { get; private set; }
 
-        public DetalleCarrito(int cantidad, Producto producto)
+        public DetalleCarrito(int id,int cantidad, Producto producto):base(id)
         {
             Cantidad = cantidad;
             Producto = producto;

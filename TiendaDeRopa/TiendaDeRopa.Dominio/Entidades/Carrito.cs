@@ -4,12 +4,12 @@
     {
         public List<DetalleCarrito> Detalles { get; set; }
 
-        public Carrito()
+        public Carrito(int id):base(id)
         {
             Detalles = new List<DetalleCarrito>();
         }
 
-        public Carrito(List<DetalleCarrito> detalles)
+        public Carrito(int id,List<DetalleCarrito> detalles): base(id)
         {
             Detalles = detalles;
         }

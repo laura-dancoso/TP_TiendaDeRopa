@@ -4,12 +4,12 @@
     { 
         public bool Premium { get; private set; }
 
-        public Cliente(string nombre, string email) : base(nombre, email)
+        public Cliente(int id, string nombre, string email) : base(id,nombre, email)
         {
             Premium = false;
         }
 
-        public Cliente(string nombre, string email, bool premium) : base(nombre, email)
+        public Cliente(int id,string nombre, string email, bool premium) : base(id,nombre, email)
         {
             Premium = premium;
         }

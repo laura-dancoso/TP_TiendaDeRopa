@@ -6,7 +6,7 @@
         public string Email { get; set; }
         public bool EstaLogueado { get; protected set; }
 
-        public Usuario(string nombre, string email)
+        public Usuario(int id, string nombre, string email):base(id)
         {
             Nombre = nombre;
             Email = email;

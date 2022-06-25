@@ -6,7 +6,7 @@
         public Carrito Carrito { get; set; }
         public Cliente Cliente { get; set; }
 
-        public Compra(DateTime fecha, Carrito carrito, Cliente cliente)
+        public Compra(int id,DateTime fecha, Carrito carrito, Cliente cliente):base(id)
         {
             Fecha = fecha;
             Carrito = carrito;
