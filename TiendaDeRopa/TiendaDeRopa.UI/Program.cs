@@ -13,5 +13,6 @@ namespace TiendaDeRopa.UI
             ApplicationConfiguration.Initialize();
             Application.Run(new Bienvenida());
         }
+
     }
 }

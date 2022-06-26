@@ -9,6 +9,7 @@ namespace TiendaDeRopa.UI
             InitializeComponent();
         }
 
+
         private void BtnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -46,7 +47,7 @@ namespace TiendaDeRopa.UI
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void AbrirForm(object formHijo)
+        public void AbrirForm(object formHijo)
         {
             if (this.PanelContainer.Controls.Count > 0)            
                 this.PanelContainer.Controls.RemoveAt(0);
@@ -56,12 +57,27 @@ namespace TiendaDeRopa.UI
             this.PanelContainer.Controls.Add(fh);
             this.PanelContainer.Tag = fh;
             fh.Show();
-            
+
         }
 
         private void BtnProductos_Click(object sender, EventArgs e)
         {
             AbrirForm(new Productos());
+            
+        }
+
+
+
+        private void PanelContainer_Paint(object sender, PaintEventArgs e)
+        {
+           
+        }
+
+
+
+        private void BtnCarrito1_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new Carrito());
         }
     }
 }

@@ -43,7 +43,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.BtnLogOut = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.BtnCarrito = new System.Windows.Forms.Button();
+            this.BtnCarrito1 = new System.Windows.Forms.Button();
             this.BtnProductos = new System.Windows.Forms.Button();
             this.PanelContainer = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -132,7 +132,7 @@
             this.PanelMenu.Controls.Add(this.panel4);
             this.PanelMenu.Controls.Add(this.BtnLogOut);
             this.PanelMenu.Controls.Add(this.panel2);
-            this.PanelMenu.Controls.Add(this.BtnCarrito);
+            this.PanelMenu.Controls.Add(this.BtnCarrito1);
             this.PanelMenu.Controls.Add(this.BtnProductos);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenu.Location = new System.Drawing.Point(0, 35);
@@ -222,19 +222,20 @@
             this.panel2.Size = new System.Drawing.Size(10, 48);
             this.panel2.TabIndex = 2;
             // 
-            // BtnCarrito
+            // BtnCarrito1
             // 
-            this.BtnCarrito.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCarrito.FlatAppearance.BorderSize = 0;
-            this.BtnCarrito.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.BtnCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCarrito.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnCarrito.Location = new System.Drawing.Point(12, 144);
-            this.BtnCarrito.Name = "BtnCarrito";
-            this.BtnCarrito.Size = new System.Drawing.Size(185, 48);
-            this.BtnCarrito.TabIndex = 1;
-            this.BtnCarrito.Text = "Carrito";
-            this.BtnCarrito.UseVisualStyleBackColor = true;
+            this.BtnCarrito1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCarrito1.FlatAppearance.BorderSize = 0;
+            this.BtnCarrito1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.BtnCarrito1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCarrito1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnCarrito1.Location = new System.Drawing.Point(12, 144);
+            this.BtnCarrito1.Name = "BtnCarrito1";
+            this.BtnCarrito1.Size = new System.Drawing.Size(185, 48);
+            this.BtnCarrito1.TabIndex = 1;
+            this.BtnCarrito1.Text = "Carrito";
+            this.BtnCarrito1.UseVisualStyleBackColor = true;
+            this.BtnCarrito1.Click += new System.EventHandler(this.BtnCarrito1_Click);
             // 
             // BtnProductos
             // 
@@ -260,6 +261,7 @@
             this.PanelContainer.Name = "PanelContainer";
             this.PanelContainer.Size = new System.Drawing.Size(1100, 615);
             this.PanelContainer.TabIndex = 2;
+            this.PanelContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContainer_Paint);
             // 
             // Bienvenida
             // 
@@ -292,7 +294,7 @@
         private PictureBox BtnMinimize;
         private PictureBox BtnMaximize;
         private Button BtnProductos;
-        private Button BtnCarrito;
+        private Button BtnCarrito1;
         private Panel panel2;
         private Panel panel4;
         private Button BtnLogOut;
