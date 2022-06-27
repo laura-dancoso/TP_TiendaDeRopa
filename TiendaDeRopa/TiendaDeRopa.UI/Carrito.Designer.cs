@@ -1,4 +1,7 @@
-﻿namespace TiendaDeRopa.UI
+﻿
+
+namespace TiendaDeRopa.UI
+
 {
     partial class Carrito
     {
@@ -31,7 +34,8 @@
             this.labelTotal = new System.Windows.Forms.Label();
             this.BtnIniciarCompra = new System.Windows.Forms.Button();
             this.BtnSeguirComprando = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BtnDescargaFactura = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // labelTotal
@@ -76,20 +80,21 @@
             this.BtnSeguirComprando.Text = "Seguir comprando";
             this.BtnSeguirComprando.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // BtnDescargaFactura
             // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(74, 399);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(324, 45);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Descargar factura";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnDescargaFactura.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnDescargaFactura.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnDescargaFactura.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.BtnDescargaFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDescargaFactura.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnDescargaFactura.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnDescargaFactura.Location = new System.Drawing.Point(74, 399);
+            this.BtnDescargaFactura.Name = "BtnDescargaFactura";
+            this.BtnDescargaFactura.Size = new System.Drawing.Size(324, 45);
+            this.BtnDescargaFactura.TabIndex = 3;
+            this.BtnDescargaFactura.Text = "Descargar factura";
+            this.BtnDescargaFactura.UseVisualStyleBackColor = true;
+            this.BtnDescargaFactura.Click += new System.EventHandler(this.BtnDescargaFactura_Click);
             // 
             // Carrito
             // 
@@ -97,7 +102,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.BtnDescargaFactura);
             this.Controls.Add(this.BtnSeguirComprando);
             this.Controls.Add(this.BtnIniciarCompra);
             this.Controls.Add(this.labelTotal);
@@ -114,6 +119,7 @@
         private Label labelTotal;
         private Button BtnIniciarCompra;
         private Button BtnSeguirComprando;
-        private Button button3;
+        private Button BtnDescargaFactura;
+        private SaveFileDialog saveFileDialog1;
     }
 }

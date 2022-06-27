@@ -22,8 +22,41 @@ namespace TiendaDeRopa.UI
 
         }
 
+        private void BtnDescargaFactura_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+
+                    if (File.Exists(saveFileDialog1.FileName))
+                    {
+                        string txt = saveFileDialog1.FileName;
+
+                        StreamWriter textoGuardar = File.CreateText(txt);
+                        textoGuardar.WriteLine("Detalles de la compra ------------");
+                        textoGuardar.Flush();
+                        textoGuardar.Close();
+
+                    }
+                    else
+                    {
+                        string txt = saveFileDialog1.FileName;
+
+                        StreamWriter textoGuardar = File.CreateText(txt);
+                        textoGuardar.WriteLine("Detalles de la compra");
+                        textoGuardar.Flush();
+                        textoGuardar.Close();
+                    }
+
+                }
 
 
-
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al intentar guardar");
+            }
+        }
     }
 }
