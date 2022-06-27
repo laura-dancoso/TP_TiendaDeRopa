@@ -46,12 +46,15 @@
             this.BtnCarrito1 = new System.Windows.Forms.Button();
             this.BtnProductos = new System.Windows.Forms.Button();
             this.PanelContainer = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnRestore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnClose)).BeginInit();
             this.PanelMenu.SuspendLayout();
+            this.PanelContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -171,9 +174,9 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(12, 306);
+            this.button1.Location = new System.Drawing.Point(3, 306);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(185, 48);
+            this.button1.Size = new System.Drawing.Size(194, 48);
             this.button1.TabIndex = 8;
             this.button1.Text = "boton";
             this.button1.UseVisualStyleBackColor = true;
@@ -195,9 +198,9 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel4.Location = new System.Drawing.Point(6, 398);
+            this.panel4.Location = new System.Drawing.Point(3, 531);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 23);
+            this.panel4.Size = new System.Drawing.Size(10, 47);
             this.panel4.TabIndex = 5;
             // 
             // BtnLogOut
@@ -207,12 +210,13 @@
             this.BtnLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.BtnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLogOut.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnLogOut.Location = new System.Drawing.Point(15, 398);
+            this.BtnLogOut.Location = new System.Drawing.Point(3, 531);
             this.BtnLogOut.Name = "BtnLogOut";
-            this.BtnLogOut.Size = new System.Drawing.Size(185, 23);
+            this.BtnLogOut.Size = new System.Drawing.Size(194, 47);
             this.BtnLogOut.TabIndex = 4;
             this.BtnLogOut.Text = "Cerrar sesión";
             this.BtnLogOut.UseVisualStyleBackColor = true;
+            this.BtnLogOut.Click += new System.EventHandler(this.BtnLogOut_Click);
             // 
             // panel2
             // 
@@ -247,7 +251,7 @@
             this.BtnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnProductos.Location = new System.Drawing.Point(12, 60);
             this.BtnProductos.Name = "BtnProductos";
-            this.BtnProductos.Size = new System.Drawing.Size(185, 48);
+            this.BtnProductos.Size = new System.Drawing.Size(188, 48);
             this.BtnProductos.TabIndex = 0;
             this.BtnProductos.Text = "Productos";
             this.BtnProductos.UseVisualStyleBackColor = true;
@@ -256,12 +260,22 @@
             // PanelContainer
             // 
             this.PanelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.PanelContainer.Controls.Add(this.pictureBox1);
             this.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContainer.Location = new System.Drawing.Point(200, 35);
             this.PanelContainer.Name = "PanelContainer";
             this.PanelContainer.Size = new System.Drawing.Size(1100, 615);
             this.PanelContainer.TabIndex = 2;
             this.PanelContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContainer_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(207, 35);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(605, 157);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Bienvenida
             // 
@@ -280,6 +294,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.BtnMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnClose)).EndInit();
             this.PanelMenu.ResumeLayout(false);
+            this.PanelContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -303,5 +319,6 @@
         private Panel panel5;
         private Panel panel7;
         private Panel panel3;
+        private PictureBox pictureBox1;
     }
 }

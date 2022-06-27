@@ -79,5 +79,12 @@ namespace TiendaDeRopa.UI
         {
             AbrirForm(new Carrito());
         }
+
+        private void BtnLogOut_Click(object sender, EventArgs e)
+        {
+            var form = new Ingreso();
+            form.Show();
+            this.Hide();
+        }
     }
 }

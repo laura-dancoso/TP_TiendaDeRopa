@@ -79,6 +79,7 @@ namespace TiendaDeRopa.UI
             this.BtnSeguirComprando.TabIndex = 2;
             this.BtnSeguirComprando.Text = "Seguir comprando";
             this.BtnSeguirComprando.UseVisualStyleBackColor = true;
+            this.BtnSeguirComprando.Click += new System.EventHandler(this.BtnSeguirComprando_Click);
             // 
             // BtnDescargaFactura
             // 

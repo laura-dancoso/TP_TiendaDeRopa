@@ -58,5 +58,11 @@ namespace TiendaDeRopa.UI
                 MessageBox.Show("Error al intentar guardar");
             }
         }
+
+        private void BtnSeguirComprando_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
     }
 }
