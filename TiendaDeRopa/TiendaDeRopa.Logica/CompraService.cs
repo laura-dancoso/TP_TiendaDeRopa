@@ -16,7 +16,7 @@ namespace TiendaDeRopa.Logica
         private Compra? _compra;
         public Compra IniciarCompra(int idCompra, int idCarrito, Cliente cliente)
         {
-            _compra = new Compra(idCarrito, DateTime.Now, new Carrito(idCarrito), cliente);
+            _compra = new Compra(idCompra, DateTime.Now, new Carrito(idCarrito), cliente);
             return _compra;
         }
 

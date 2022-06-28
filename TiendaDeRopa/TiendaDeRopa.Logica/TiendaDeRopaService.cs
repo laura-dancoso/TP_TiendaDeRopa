@@ -13,7 +13,11 @@ namespace TiendaDeRopa.Logica
         private Tienda _tienda;
         private Cliente? _cliente;
 
-        public TiendaDeRopaService(IDataInicialService dataService, ILoginService loginService, ICompraService compraService, IFacturaService facturaService)
+        public TiendaDeRopaService(
+            IDataInicialService dataService,
+            ILoginService loginService,
+            ICompraService compraService,
+            IFacturaService facturaService)
         {
             _dataService = dataService;
             _loginService = loginService;
