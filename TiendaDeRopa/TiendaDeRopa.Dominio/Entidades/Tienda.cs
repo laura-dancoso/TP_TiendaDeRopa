@@ -29,5 +29,10 @@
             Productos = productos;
             Compras = new List<Compra>();
         }
+
+        public override string ToString()
+        {
+            return $"{Nombre} - {Tipo}";
+        }
     }
 }
