@@ -51,6 +51,19 @@ namespace TiendaDeRopa.Logica
             }
         }
 
+        public void Salir()
+        {
+            try
+            {
+                _loginService.LogOut(_dataService.GetClienteInvitado());
+                _cliente = null;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public void IniciarCompra()
         {
             VerificarCliente();            
@@ -78,6 +91,13 @@ namespace TiendaDeRopa.Logica
             _compraService.ModificarCantidadProducto(id, cantidad);
         }
 
+        public void EliminarDetalleCarrito(int id)
+        {
+            VerificarCliente();
+
+            _compraService.EliminarDetalleCarrito(id);
+        }
+
         public void VaciarCarrito()
         {
             VerificarCliente();
@@ -87,6 +107,12 @@ namespace TiendaDeRopa.Logica
         private void VerificarCliente()
         {
             if (_cliente is null) throw new Exception("Debe existir un cliente para realizar esta acción");
+        }
+
+        public float TotalCompra()
+        {
+            return _compraService.TotalCompra();
+
         }
     }
 }

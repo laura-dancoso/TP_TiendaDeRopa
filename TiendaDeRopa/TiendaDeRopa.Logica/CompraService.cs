@@ -10,6 +10,7 @@ namespace TiendaDeRopa.Logica
         void ModificarCantidadProducto(int id, int cantidad);
         void EliminarDetalleCarrito(int id);
         void VaciarCarrito();
+        float TotalCompra();
     }
     public class CompraService : ICompraService
     {
@@ -54,6 +55,12 @@ namespace TiendaDeRopa.Logica
         private void VerificarCompra()
         {
             if (_compra is null) throw new Exception("Debe existir una compra para realizar la acción");
+        }
+
+        public float TotalCompra()
+        {
+            VerificarCompra();
+            return _compra!.Carrito.Detalles.Sum(d => d.Producto.Precio * d.Cantidad);
         }
 
     }

@@ -1,26 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Data;
+using TiendaDeRopa.Logica;
 
 namespace TiendaDeRopa.UI
 {
     public partial class Carrito : Form
     {
-        public Carrito()
+        private TiendaDeRopaService _tiendaService;
+        public Carrito(TiendaDeRopaService tienda)
         {
             InitializeComponent();
+            _tiendaService = tienda;
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void BtnDescargaFactura_Click(object sender, EventArgs e)
         {
@@ -62,6 +53,29 @@ namespace TiendaDeRopa.UI
         private void BtnSeguirComprando_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Carrito_Load(object sender, EventArgs e)
+        {
+            if (_tiendaService.MostrarCarrito().Detalles.Any())
+            {
+                LogicUI.CargarProductos(flowLy, _tiendaService);
+
+                labelTotal.Text = "$" + _tiendaService.TotalCompra().ToString();
+            }
+            else
+            {
+                //TODO!!
+                // DEBERÍA CERRARSE LA PESTAÑA DEL CARRITO Y VOLVER AL DE PRODUCTOS O MOSTRAR EL COSO VACIO
+                MessageBox.Show("El carrito está vacio!!");
+                new Productos(_tiendaService).Show();
+                this.Hide();
+            }
         }
 
     }

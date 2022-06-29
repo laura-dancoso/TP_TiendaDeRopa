@@ -32,10 +32,10 @@ namespace TiendaDeRopa.UI
         private void InitializeComponent()
         {
             this.labelTotal = new System.Windows.Forms.Label();
-            this.BtnIniciarCompra = new System.Windows.Forms.Button();
-            this.BtnSeguirComprando = new System.Windows.Forms.Button();
             this.BtnDescargaFactura = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.flowLy = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelTotal
@@ -43,43 +43,11 @@ namespace TiendaDeRopa.UI
             this.labelTotal.AutoSize = true;
             this.labelTotal.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelTotal.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelTotal.Location = new System.Drawing.Point(184, 238);
+            this.labelTotal.Location = new System.Drawing.Point(54, 393);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(105, 37);
             this.labelTotal.TabIndex = 0;
             this.labelTotal.Text = "Total: $";
-            this.labelTotal.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // BtnIniciarCompra
-            // 
-            this.BtnIniciarCompra.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnIniciarCompra.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnIniciarCompra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.BtnIniciarCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnIniciarCompra.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnIniciarCompra.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnIniciarCompra.Location = new System.Drawing.Point(74, 297);
-            this.BtnIniciarCompra.Name = "BtnIniciarCompra";
-            this.BtnIniciarCompra.Size = new System.Drawing.Size(324, 45);
-            this.BtnIniciarCompra.TabIndex = 1;
-            this.BtnIniciarCompra.Text = "Iniciar compra";
-            this.BtnIniciarCompra.UseVisualStyleBackColor = true;
-            // 
-            // BtnSeguirComprando
-            // 
-            this.BtnSeguirComprando.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnSeguirComprando.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnSeguirComprando.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.BtnSeguirComprando.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSeguirComprando.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnSeguirComprando.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnSeguirComprando.Location = new System.Drawing.Point(74, 348);
-            this.BtnSeguirComprando.Name = "BtnSeguirComprando";
-            this.BtnSeguirComprando.Size = new System.Drawing.Size(324, 45);
-            this.BtnSeguirComprando.TabIndex = 2;
-            this.BtnSeguirComprando.Text = "Seguir comprando";
-            this.BtnSeguirComprando.UseVisualStyleBackColor = true;
-            this.BtnSeguirComprando.Click += new System.EventHandler(this.BtnSeguirComprando_Click);
             // 
             // BtnDescargaFactura
             // 
@@ -89,7 +57,7 @@ namespace TiendaDeRopa.UI
             this.BtnDescargaFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDescargaFactura.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnDescargaFactura.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnDescargaFactura.Location = new System.Drawing.Point(74, 399);
+            this.BtnDescargaFactura.Location = new System.Drawing.Point(452, 393);
             this.BtnDescargaFactura.Name = "BtnDescargaFactura";
             this.BtnDescargaFactura.Size = new System.Drawing.Size(324, 45);
             this.BtnDescargaFactura.TabIndex = 3;
@@ -97,19 +65,38 @@ namespace TiendaDeRopa.UI
             this.BtnDescargaFactura.UseVisualStyleBackColor = true;
             this.BtnDescargaFactura.Click += new System.EventHandler(this.BtnDescargaFactura_Click);
             // 
+            // flowLy
+            // 
+            this.flowLy.Location = new System.Drawing.Point(54, 40);
+            this.flowLy.Name = "flowLy";
+            this.flowLy.Size = new System.Drawing.Size(722, 331);
+            this.flowLy.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(54, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 30);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Carrito";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
             // Carrito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.flowLy);
             this.Controls.Add(this.BtnDescargaFactura);
-            this.Controls.Add(this.BtnSeguirComprando);
-            this.Controls.Add(this.BtnIniciarCompra);
             this.Controls.Add(this.labelTotal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Carrito";
             this.Text = "Carrito";
+            this.Load += new System.EventHandler(this.Carrito_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,9 +105,9 @@ namespace TiendaDeRopa.UI
         #endregion
 
         private Label labelTotal;
-        private Button BtnIniciarCompra;
-        private Button BtnSeguirComprando;
         private Button BtnDescargaFactura;
         private SaveFileDialog saveFileDialog1;
+        private FlowLayoutPanel flowLy;
+        private Label label1;
     }
 }

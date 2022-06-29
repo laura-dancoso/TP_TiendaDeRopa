@@ -35,15 +35,11 @@
             this.BtnMaximize = new System.Windows.Forms.PictureBox();
             this.BtnClose = new System.Windows.Forms.PictureBox();
             this.PanelMenu = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.BtnLogOut = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.BtnCarrito1 = new System.Windows.Forms.Button();
+            this.BtnCarrito = new System.Windows.Forms.Button();
             this.BtnProductos = new System.Windows.Forms.Button();
             this.PanelContainer = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -127,37 +123,17 @@
             // PanelMenu
             // 
             this.PanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.PanelMenu.Controls.Add(this.panel5);
-            this.PanelMenu.Controls.Add(this.panel7);
             this.PanelMenu.Controls.Add(this.panel3);
-            this.PanelMenu.Controls.Add(this.button1);
-            this.PanelMenu.Controls.Add(this.button3);
             this.PanelMenu.Controls.Add(this.panel4);
             this.PanelMenu.Controls.Add(this.BtnLogOut);
             this.PanelMenu.Controls.Add(this.panel2);
-            this.PanelMenu.Controls.Add(this.BtnCarrito1);
+            this.PanelMenu.Controls.Add(this.BtnCarrito);
             this.PanelMenu.Controls.Add(this.BtnProductos);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenu.Location = new System.Drawing.Point(0, 35);
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Size = new System.Drawing.Size(200, 615);
             this.PanelMenu.TabIndex = 1;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel5.Location = new System.Drawing.Point(3, 306);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(10, 48);
-            this.panel5.TabIndex = 5;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel7.Location = new System.Drawing.Point(3, 225);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(10, 48);
-            this.panel7.TabIndex = 4;
             // 
             // panel3
             // 
@@ -166,34 +142,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(10, 48);
             this.panel3.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(3, 306);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 48);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "boton";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(12, 225);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(185, 48);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "boton";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // panel4
             // 
@@ -226,20 +174,20 @@
             this.panel2.Size = new System.Drawing.Size(10, 48);
             this.panel2.TabIndex = 2;
             // 
-            // BtnCarrito1
+            // BtnCarrito
             // 
-            this.BtnCarrito1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCarrito1.FlatAppearance.BorderSize = 0;
-            this.BtnCarrito1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.BtnCarrito1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCarrito1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnCarrito1.Location = new System.Drawing.Point(12, 144);
-            this.BtnCarrito1.Name = "BtnCarrito1";
-            this.BtnCarrito1.Size = new System.Drawing.Size(185, 48);
-            this.BtnCarrito1.TabIndex = 1;
-            this.BtnCarrito1.Text = "Carrito";
-            this.BtnCarrito1.UseVisualStyleBackColor = true;
-            this.BtnCarrito1.Click += new System.EventHandler(this.BtnCarrito1_Click);
+            this.BtnCarrito.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCarrito.FlatAppearance.BorderSize = 0;
+            this.BtnCarrito.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.BtnCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCarrito.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnCarrito.Location = new System.Drawing.Point(12, 144);
+            this.BtnCarrito.Name = "BtnCarrito";
+            this.BtnCarrito.Size = new System.Drawing.Size(185, 48);
+            this.BtnCarrito.TabIndex = 1;
+            this.BtnCarrito.Text = "Carrito";
+            this.BtnCarrito.UseVisualStyleBackColor = true;
+            this.BtnCarrito.Click += new System.EventHandler(this.BtnCarrito1_Click);
             // 
             // BtnProductos
             // 
@@ -266,7 +214,6 @@
             this.PanelContainer.Name = "PanelContainer";
             this.PanelContainer.Size = new System.Drawing.Size(1100, 615);
             this.PanelContainer.TabIndex = 2;
-            this.PanelContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContainer_Paint);
             // 
             // pictureBox1
             // 
@@ -287,6 +234,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Bienvenida";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BtnRestore)).EndInit();
@@ -310,14 +258,10 @@
         private PictureBox BtnMinimize;
         private PictureBox BtnMaximize;
         private Button BtnProductos;
-        private Button BtnCarrito1;
+        private Button BtnCarrito;
         private Panel panel2;
         private Panel panel4;
         private Button BtnLogOut;
-        private Button button1;
-        private Button button3;
-        private Panel panel5;
-        private Panel panel7;
         private Panel panel3;
         private PictureBox pictureBox1;
     }

@@ -1,37 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using TiendaDeRopa.Logica;
 
 namespace TiendaDeRopa.UI
 {
     public partial class Ingreso : Form
     {
-        public Ingreso()
+        private TiendaDeRopaService _tiendaService;
+
+        public Ingreso(TiendaDeRopaService tiendaService)
         {
+            _tiendaService = tiendaService;
             InitializeComponent();
-        }
-
-        private void Ingreso_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void BtnIngresarUser_Click(object sender, EventArgs e)
         {
-            var form = new Bienvenida();
-            form.Show();
-            this.Hide();  
-        }
-
-        private void BtnIngresarAdmin_Click(object sender, EventArgs e)
-        {
-
+            try
+            {
+                _tiendaService.Ingresar();
+                var form = new Bienvenida(_tiendaService);
+                form.Show();
+                this.Hide();  
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No es posible ingresar. {ex.Message}");
+            }
         }
     }
 }

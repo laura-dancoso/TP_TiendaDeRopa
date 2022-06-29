@@ -1,23 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using TiendaDeRopa.Logica;
+using TiendaDeRopa.UI.Properties;
 
 namespace TiendaDeRopa.UI
 {
     public partial class Productos : Form
     {
-        public Productos()
+        private TiendaDeRopaService _tiendaService;
+        public Productos(TiendaDeRopaService tiendaService)
         {
+            _tiendaService = tiendaService;
             InitializeComponent();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void Productos_Load(object sender, EventArgs e)
+        {
+            CargarProductos();
+        }
+
+        private void CargarProductos()
+        {
+            _tiendaService.GetProductos().ForEach(p =>
+            {
+                flowLayout.Controls.Add(new Producto(p.Id,p.Nombre, p.Talle, p.Precio,Resources.GetImg(p.Id.ToString()), _tiendaService));
+            });
+        }
+
+        private void flowLayout_Paint(object sender, PaintEventArgs e)
         {
 
         }

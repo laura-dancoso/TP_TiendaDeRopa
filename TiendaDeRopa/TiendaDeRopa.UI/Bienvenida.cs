@@ -1,14 +1,17 @@
 using System.Runtime.InteropServices;
+using TiendaDeRopa.Logica;
 
 namespace TiendaDeRopa.UI
 {
     public partial class Bienvenida : Form
     {
-        public Bienvenida()
+        private TiendaDeRopaService _tiendaService;
+        public Bienvenida(TiendaDeRopaService tiendaService)
         {
+            _tiendaService = tiendaService;
+            _tiendaService.IniciarCompra();
             InitializeComponent();
         }
-
 
         private void BtnClose_Click(object sender, EventArgs e)
         {
@@ -51,38 +54,29 @@ namespace TiendaDeRopa.UI
         {
             if (this.PanelContainer.Controls.Count > 0)            
                 this.PanelContainer.Controls.RemoveAt(0);
-            Form? fh = formHijo as Form;
+            Form? fh = (Form) formHijo;
             fh.TopLevel = false;
             fh.Dock = DockStyle.Fill;
             this.PanelContainer.Controls.Add(fh);
             this.PanelContainer.Tag = fh;
             fh.Show();
-
         }
 
         private void BtnProductos_Click(object sender, EventArgs e)
         {
-            AbrirForm(new Productos());
-            
+            AbrirForm(new Productos(_tiendaService));
+            //BtnProductos.BackColor = SystemColors.Control;
         }
-
-
-
-        private void PanelContainer_Paint(object sender, PaintEventArgs e)
-        {
-           
-        }
-
-
 
         private void BtnCarrito1_Click(object sender, EventArgs e)
         {
-            AbrirForm(new Carrito());
+            AbrirForm(new Carrito(_tiendaService));
         }
 
         private void BtnLogOut_Click(object sender, EventArgs e)
         {
-            var form = new Ingreso();
+            _tiendaService.Salir();
+            var form = new Ingreso(_tiendaService);
             form.Show();
             this.Hide();
         }
