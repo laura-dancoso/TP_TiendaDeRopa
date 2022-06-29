@@ -1,25 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Data;
+using TiendaDeRopa.Logica;
 
 namespace TiendaDeRopa.UI
 {
     public partial class Carrito : Form
     {
-        public Carrito()
+        private TiendaDeRopaService _tiendaService;
+        public Carrito(TiendaDeRopaService tienda)
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            _tiendaService = tienda;
         }
 
         private void BtnDescargaFactura_Click(object sender, EventArgs e)
@@ -34,7 +24,12 @@ namespace TiendaDeRopa.UI
                         string txt = saveFileDialog1.FileName;
 
                         StreamWriter textoGuardar = File.CreateText(txt);
-                        textoGuardar.WriteLine("Detalles de la compra ------------");
+                        textoGuardar.WriteLine("********************-DETALLE DE LA COMPRA-********************");
+                        foreach (var item in _tiendaService.MostrarCarrito().Detalles)
+                        {
+                            textoGuardar.WriteLine("\nProducto: -" + item.Producto.Nombre + "\n         Cantidad: " + item.Cantidad + "\n         Precio: $" + item.Producto.Precio);
+                        }
+                        textoGuardar.WriteLine("\n\nTotal de la compra ------------$" + _tiendaService.TotalCompra().ToString());
                         textoGuardar.Flush();
                         textoGuardar.Close();
 
@@ -64,5 +59,32 @@ namespace TiendaDeRopa.UI
             this.Hide();
         }
 
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Carrito_Load(object sender, EventArgs e)
+        {
+            if (_tiendaService.MostrarCarrito().Detalles.Any())
+            {
+                LogicUI.CargarProductos(flowLy, _tiendaService);
+
+                labelTotal.Text = "$" + _tiendaService.TotalCompra().ToString();
+                BtnDescargaFactura.Enabled = true;
+            }
+            else
+            {
+                //TODO!!
+                // DEBERÍA CERRARSE LA PESTAÑA DEL CARRITO Y VOLVER AL DE PRODUCTOS O MOSTRAR EL COSO VACIO
+                MessageBox.Show("El carrito está vacio!!");
+                BtnDescargaFactura.Enabled = false;
+                //SE ELIMINAN ESTAS LINEAS YA QUE SE SUPERPONEN LOS FORMS. REVISAR
+                //new Productos(_tiendaService).Show();
+                //this.Hide(); 
+            }
+
+
+        }
     }
 }

@@ -55,15 +55,14 @@
             this.BtnIngresarAdmin.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.BtnIngresarAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.BtnIngresarAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnIngresarAdmin.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnIngresarAdmin.Font = new System.Drawing.Font("Yu Gothic UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnIngresarAdmin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BtnIngresarAdmin.Location = new System.Drawing.Point(250, 209);
             this.BtnIngresarAdmin.Name = "BtnIngresarAdmin";
             this.BtnIngresarAdmin.Size = new System.Drawing.Size(324, 45);
             this.BtnIngresarAdmin.TabIndex = 4;
-            this.BtnIngresarAdmin.Text = "Seguir comprando";
+            this.BtnIngresarAdmin.Text = "Ingresar como administrador";
             this.BtnIngresarAdmin.UseVisualStyleBackColor = true;
-            this.BtnIngresarAdmin.Click += new System.EventHandler(this.BtnIngresarAdmin_Click);
             // 
             // Ingreso
             // 
@@ -73,9 +72,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BtnIngresarAdmin);
             this.Controls.Add(this.BtnIngresarUser);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Ingreso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ingreso";
-            this.Load += new System.EventHandler(this.Ingreso_Load);
             this.ResumeLayout(false);
 
         }
