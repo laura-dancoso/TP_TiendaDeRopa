@@ -24,7 +24,12 @@ namespace TiendaDeRopa.UI
                         string txt = saveFileDialog1.FileName;
 
                         StreamWriter textoGuardar = File.CreateText(txt);
-                        textoGuardar.WriteLine("Detalles de la compra ------------");
+                        textoGuardar.WriteLine("********************-DETALLE DE LA COMPRA-********************");
+                        foreach (var item in _tiendaService.MostrarCarrito().Detalles)
+                        {
+                            textoGuardar.WriteLine("\nProducto: -" + item.Producto.Nombre + "\n         Cantidad: " + item.Cantidad + "\n         Precio: $" + item.Producto.Precio);
+                        }
+                        textoGuardar.WriteLine("\n\nTotal de la compra ------------$" + _tiendaService.TotalCompra().ToString());
                         textoGuardar.Flush();
                         textoGuardar.Close();
 
@@ -81,6 +86,5 @@ namespace TiendaDeRopa.UI
 
 
         }
-
     }
 }

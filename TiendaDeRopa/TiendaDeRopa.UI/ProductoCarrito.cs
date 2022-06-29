@@ -29,8 +29,8 @@ namespace TiendaDeRopa.UI
                 _tiendaService.EliminarDetalleCarrito(Id);
                 LogicUI.CargarProductos(flowLy, _tiendaService);
 
-
-            }catch
+            }
+            catch
             {
                 MessageBox.Show("Hubo un error!");
             }

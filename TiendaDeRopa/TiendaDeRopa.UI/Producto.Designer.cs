@@ -71,6 +71,7 @@
             // 
             // btnCarrito
             // 
+            this.btnCarrito.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCarrito.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCarrito.Location = new System.Drawing.Point(0, 276);
             this.btnCarrito.Name = "btnCarrito";
