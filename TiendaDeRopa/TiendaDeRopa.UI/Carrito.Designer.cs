@@ -36,6 +36,7 @@ namespace TiendaDeRopa.UI
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.flowLy = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.labelTextoTotal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelTotal
@@ -43,11 +44,11 @@ namespace TiendaDeRopa.UI
             this.labelTotal.AutoSize = true;
             this.labelTotal.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelTotal.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelTotal.Location = new System.Drawing.Point(54, 393);
+            this.labelTotal.Location = new System.Drawing.Point(137, 393);
             this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(105, 37);
+            this.labelTotal.Size = new System.Drawing.Size(54, 37);
             this.labelTotal.TabIndex = 0;
-            this.labelTotal.Text = "Total: $";
+            this.labelTotal.Text = "$ 0";
             // 
             // BtnDescargaFactura
             // 
@@ -83,12 +84,24 @@ namespace TiendaDeRopa.UI
             this.label1.Text = "Carrito";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
+            // labelTextoTotal
+            // 
+            this.labelTextoTotal.AutoSize = true;
+            this.labelTextoTotal.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelTextoTotal.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelTextoTotal.Location = new System.Drawing.Point(54, 393);
+            this.labelTextoTotal.Name = "labelTextoTotal";
+            this.labelTextoTotal.Size = new System.Drawing.Size(90, 37);
+            this.labelTextoTotal.TabIndex = 6;
+            this.labelTextoTotal.Text = "Total: ";
+            // 
             // Carrito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelTextoTotal);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLy);
             this.Controls.Add(this.BtnDescargaFactura);
@@ -109,5 +122,6 @@ namespace TiendaDeRopa.UI
         private SaveFileDialog saveFileDialog1;
         private FlowLayoutPanel flowLy;
         private Label label1;
+        private Label labelTextoTotal;
     }
 }
